@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Senai Notes - Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-box">
+      <img src="imgs/logo.png" alt="Senai Notes Logo" class="logo" />
+      <h2>Welcome to Note</h2>
+      <p class="subtitle">Please log in to continue</p>
+
+      <form>
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="email@example.com" required />
+
+        <label for="password">Password 
+          <a href="#" class="forgot">Forgot?</a>
+        </label>
+        <div class="password-field">
+          <input type="password" id="password" required />
+        
+        </div>
+
+        <button type="submit" class="login-button">Login</button>
+        <hr class="divider"/>
+      </form>
+
+      <p class="signup">No account yet? <a href="#">Sign Up</a></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
