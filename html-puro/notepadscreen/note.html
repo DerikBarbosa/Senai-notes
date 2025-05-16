@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Senai Notes</title>
   <link rel="stylesheet" href="note.css" />
 </head>
+
 <body>
   <div class="container">
     <aside class="sidebar">
-      <h2 class="senai"><img src="../imgs/logo.png" /> Senai Notes</h2>
+      <div class="logo-container">
+        <img src="../imgs/image.png" alt="Logo" class="logo" />
+        <span class="title"></span>
+      </div>
       <button class="new-note">+ Create New Note</button>
       <nav class="tags">
         <h4>Tags</h4>
@@ -53,9 +58,12 @@
         <div class="note-content">
           <p><strong>Key performance optimization techniques:</strong></p>
           <ol>
-            <li><strong>Code Splitting</strong>: Use <code>React.lazy()</code> for route-based splitting. Implement dynamic imports for heavy components.</li>
-            <li><strong>Memoization</strong>: <code>useMemo</code> for expensive calculations. <code>useCallback</code> for function props. <code>React.memo</code> for component optimization.</li>
-            <li><strong>Virtual List Implementation</strong>: Use <code>react-window</code> for long lists. Implement infinite scrolling.</li>
+            <li><strong>Code Splitting</strong>: Use <code>React.lazy()</code> for route-based splitting. Implement
+              dynamic imports for heavy components.</li>
+            <li><strong>Memoization</strong>: <code>useMemo</code> for expensive calculations. <code>useCallback</code>
+              for function props. <code>React.memo</code> for component optimization.</li>
+            <li><strong>Virtual List Implementation</strong>: Use <code>react-window</code> for long lists. Implement
+              infinite scrolling.</li>
             <li><strong>TODO</strong>: Benchmark current application and identify bottlenecks.</li>
           </ol>
         </div>
@@ -70,4 +78,5 @@
     </main>
   </div>
 </body>
+
 </html>
