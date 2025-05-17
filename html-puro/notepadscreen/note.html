@@ -1,82 +1,112 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
   <title>Senai Notes</title>
-  <link rel="stylesheet" href="note.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="note.css">
 </head>
-
 <body>
-  <div class="container">
-    <aside class="sidebar">
-      <div class="logo-container">
-        <img src="../imgs/image.png" alt="Logo" class="logo" />
-        <span class="title"></span>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h2>Senai Notes</h2>
+
+    <div class="section">
+      <ul>
+        <li>📁 All Notes</li>
+        <li>🗄️ Archived Notes</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>Tags</h3>
+      <ul>
+        <li>🍳 Cooking</li>
+        <li>💻 Dev</li>
+        <li>🏃 Fitness</li>
+        <li>❤️ Health</li>
+        <li>📝 Personal</li>
+        <li>⚛️ React</li>
+        <li>🍝 Recipes</li>
+        <li>🛒 Shopping</li>
+        <li>✈️ Travel</li>
+        <li>🧩 TypeScript</li>
+      </ul>
+    </div>
+  </aside>
+
+  <!-- Main Section -->
+  <div class="main">
+    <div class="header">
+      <div></div>
+      <input type="text" placeholder="Search by title, content, or tags...">
+      <div></div>
+    </div>
+
+    <div class="content">
+      <!-- Notes List -->
+      <div class="notes-list">
+        <button>+ Create New Note</button>
+
+        <div class="note-preview active">
+          <strong>React Performance Optimization</strong><br>
+          <span class="tags">Dev, React</span><br>
+          <small>29 Oct 2024</small>
+        </div>
+
+        <div class="note-preview">
+          <strong>Japan Travel Planning</strong><br>
+          <span class="tags">Travel, Personal</span><br>
+          <small>28 Oct 2024</small>
+        </div>
+
+        <div class="note-preview">
+          <strong>Favorite Pasta Recipes</strong><br>
+          <span class="tags">Cooking, Recipes</span><br>
+          <small>27 Oct 2024</small>
+        </div>
+
+        <!-- Add more as needed... -->
+
       </div>
-      <button class="new-note">+ Create New Note</button>
-      <nav class="tags">
-        <h4>Tags</h4>
-        <ul>
-          <li class="img-style"><img src="../imgs/Tag.png" /> Cooking</li>
-          <li class="img-style"><img src="../imgs/Tag.png" /> Dev</li>
-          <li class="img-style"><img src="../imgs/Tag.png" /> Fitness</li>
-          <li class="img-style"><img src="../imgs/Tag.png" /> Health</li>
-          <li class="img-style"><img src="../imgs/Tag.png" /> Personal</li>
-          <li class="img-style"><img src="../imgs/Tag.png" /> React</li>
-        </ul>
-      </nav>
-    </aside>
 
-    <main class="main">
-      <header class="topbar">
-        <input type="text" placeholder="Search by title, content, or tags..." />
-        <div class="icons">
-          <img src="topbar-settings.png" alt="Settings" />
-          <img src="topbar-user.png" alt="User" />
+      <!-- Note Details -->
+      <div class="note-details">
+        <img src="../imgs/Rectangle 44.png" alt="React Logo" width="150">
+        <h2>React Performance Optimization</h2>
+        <div class="tags">Dev, React</div>
+        <small>Last edited: 29 Oct 2024</small>
+
+        <p><strong>Key performance optimization techniques:</strong></p>
+
+        <ol>
+          <li>
+            <strong>Code Splitting</strong><br>
+            - Use <code>React.lazy()</code> for route-based splitting<br>
+            - Implement dynamic imports for heavy components
+          </li>
+          <li>
+            <strong>Memoization</strong><br>
+            - <code>useMemo</code> for expensive calculations<br>
+            - <code>useCallback</code> for function props<br>
+            - <code>React.memo</code> for component optimization
+          </li>
+          <li>
+            <strong>Virtual List Implementation</strong><br>
+            - Use <code>react-window</code> for long lists<br>
+            - Implement infinite scrolling
+          </li>
+        </ol>
+
+        <p><strong>TODO:</strong> Benchmark current application and identify bottlenecks</p>
+
+        <div class="save-cancel">
+          <button class="save-btn">Save Note</button>
+          <button class="cancel-btn">Cancel</button>
         </div>
-      </header>
-
-      <section class="note-detail">
-        <img src="note-header.png" class="note-image" alt="Note header image" />
-
-        <h1>React Performance Optimization</h1>
-
-        <div class="meta">
-          <div class="tags">
-            <img src="tag-icon.png" />
-            <span>Dev</span>
-            <span>React</span>
-          </div>
-          <div class="date">
-            <img src="clock-icon.png" />
-            <span>29 Oct 2024</span>
-          </div>
-        </div>
-
-        <div class="note-content">
-          <p><strong>Key performance optimization techniques:</strong></p>
-          <ol>
-            <li><strong>Code Splitting</strong>: Use <code>React.lazy()</code> for route-based splitting. Implement
-              dynamic imports for heavy components.</li>
-            <li><strong>Memoization</strong>: <code>useMemo</code> for expensive calculations. <code>useCallback</code>
-              for function props. <code>React.memo</code> for component optimization.</li>
-            <li><strong>Virtual List Implementation</strong>: Use <code>react-window</code> for long lists. Implement
-              infinite scrolling.</li>
-            <li><strong>TODO</strong>: Benchmark current application and identify bottlenecks.</li>
-          </ol>
-        </div>
-
-        <div class="actions">
-          <button class="save">Save Note</button>
-          <button class="cancel">Cancel</button>
-          <button class="archive">Archive Note</button>
-          <button class="delete">Delete Note</button>
-        </div>
-      </section>
-    </main>
+      </div>
+    </div>
   </div>
 </body>
-
 </html>
