@@ -54,6 +54,7 @@ body {
   display: flex;
   flex-direction: column;
   border-right: #555;
+
 }
 
 .header {
@@ -63,6 +64,8 @@ body {
   background-color: white;
   border-bottom: 1px solid #ddd;
   border-right: #555;
+  justify-content: flex-end;
+  gap: 700px;
 }
 
 .header input {
@@ -253,8 +256,19 @@ flex-direction: column;
 margin: 10px 0;
 gap: 20px;
 
-<<<<<<< HEAD
+  }
+
+.pepino {
+
+  display: flex;
+  align-items: center;
+
 }
-=======
+
+.all, .notes {
+
+ font-weight: 700;
+  font-size: 16px;
+  color: #0f1117; /* ou preto */
+  margin-right: 4px; /* espaço só entre eles */
 }
->>>>>>> 856c15a4e4858cb12aad082d0d3620abace3ca2f
