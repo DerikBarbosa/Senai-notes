@@ -80,7 +80,7 @@ body {
 
 /* Notes List */
 .notes-list {
-  width: 280px;
+  width: 240px;
   background: #fff;
   border-right: 1px solid #ddd;
   padding: 16px;
@@ -238,4 +238,19 @@ display:flex
 
 .note-info {
   flex: 1;
+}
+
+hr { 
+  
+  border-top: #E0E4EA 1px;
+
+}
+
+.textos {
+
+display: flex;
+flex-direction: column;
+margin: 10px 0;
+gap: 20px;
+
 }
