@@ -19,6 +19,7 @@
         <li class="cozinha-0"><img class="casinha1" src="../imgs/Home.png" alt="casa"> All Notes > </li>
         <li class="cozinha"><img class="casinha" src="../imgs/Archive.png" alt="casa"> Archived Notes</li>
       </ul>
+      <hr>
     </div>
 
     <div class="section">
@@ -41,7 +42,7 @@
   <!-- Main Section -->
   <div class="main">
     <div class="header">
-      <div></div>
+      <div><h2>All Notes</h2></div>
       <input type="text" placeholder="Search by title, content, or tags...">
       <div></div>
     </div>
@@ -66,6 +67,8 @@
             </div>
           </div>
         </div>
+        
+        <hr>
 
         <div class="note-preview">
           <div class="note-item">
@@ -83,6 +86,8 @@
       </div>
     </div>
 
+    <hr>
+
         <div class="note-preview">
            <div class="note-item">
             <div>
@@ -98,6 +103,8 @@
         </div>
       </div>
     </div>
+    
+    <hr>
         <!-- Add more as needed... -->
 
       </div>
@@ -109,28 +116,36 @@
         <div class="tags-2">Dev, React</div>
         <small>Last edited: 29 Oct 2024</small>
 
+        <hr>
+
         <p><strong>Key performance optimization techniques:</strong></p>
 
         <ol>
+          <div class="textos">
           <li>
-            <strong>Code Splitting</strong><br>
-            - Use <code>React.lazy()</code> for route-based splitting<br>
+            Code Splitting<br>
+            - Use React.lazy() for route-based splitting<br>
             - Implement dynamic imports for heavy components
           </li>
+
+
           <li>
-            <strong>Memoization</strong><br>
-            - <code>useMemo</code> for expensive calculations<br>
-            - <code>useCallback</code> for function props<br>
-            - <code>React.memo</code> for component optimization
+                Memoization<br>
+            - useMemo for expensive calculations<br>
+            - useCallback for function props<br>
+            - React.memo for component optimization
           </li>
           <li>
-            <strong>Virtual List Implementation</strong><br>
-            - Use <code>react-window</code> for long lists<br>
+            Virtual List Implementation<br>
+            - Use react-window for long lists<br>
             - Implement infinite scrolling
           </li>
+          </div>
         </ol>
 
         <p><strong>TODO:</strong> Benchmark current application and identify bottlenecks</p>
+
+        <hr>
 
         <div class="save-cancel">
           <button class="save-btn">Save Note</button>
