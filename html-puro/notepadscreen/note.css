@@ -1,274 +1,392 @@
 body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  display: flex;
-  height: 100vh;
-  background: #f5f5f5;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    min-height: 100vh; /* Use min-height para permitir rolagem */
+    background: #f5f5f5;
+    color: #333;
 }
 
-/* Sidebar */
-.sidebar {
-  width: 250px;
-  background: white;
-  border-right: 1px solid #ddd;
-  padding: 20px;
-  box-sizing: border-box;
+/* Left Sidebar */
+.left-sidebar {
+    width: 250px;
+    background: white;
+    border-right: 1px solid #ddd;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    position: sticky; /* Sticky para que ela fixe ao rolar, se necessário */
+    top: 0;
+    height: 100vh; /* Ocupa a altura total da viewport */
 }
 
-.sidebar h2 {
-  font-size: 18px;
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
+.left-sidebar .logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
 }
 
-.sidebar h2::before {
-  margin-right: 8px;
+.left-sidebar .logo-img {
+    height: 24px; /* Ajuste o tamanho da imagem do logo */
+    margin-right: 8px;
 }
 
-.sidebar .section {
-  margin-bottom: 20px;
-  border-right: #555;
+.left-sidebar .section {
+    margin-bottom: 20px;
 }
 
-.sidebar .section h3 {
-  font-size: 14px;
-  margin-bottom: 8px;
-  color: #666;
+.left-sidebar .section h3 {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #666;
 }
 
-.sidebar ul {
-  list-style: none;
-  padding: 0;
+.left-sidebar ul {
+    list-style: none;
+    padding: 0;
 }
 
-.sidebar li {
-  padding: 5px 0;
-  font-size: 14px;
-  cursor: pointer;
+.left-sidebar .nav-item {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 6px;
+    margin-bottom: 4px;
+    transition: background-color 0.2s ease;
 }
 
-/* Main Content */
-.main {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  border-right: #555;
-
+.left-sidebar .nav-item:hover {
+    background: #f0f0f0;
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  padding: 16px 24px;
-  background-color: white;
-  border-bottom: 1px solid #ddd;
-  border-right: #555;
-  justify-content: flex-end;
-  gap: 700px;
+.left-sidebar .nav-item.active {
+    background-color: #e8e8e8;
+    font-weight: 600;
 }
 
-.header input {
-  width: 300px;
-  height: 43px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  border-left: #555;
+.left-sidebar .nav-icon {
+    height: 18px;
+    margin-right: 8px;
+    opacity: 0.7;
 }
 
-.content {
-  display: flex;
-  flex: 1;
+hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 15px 0;
+}
+
+/* Main Content Area */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-right: 250px; /* Espaço para a sidebar direita */
+}
+
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+    gap: 20px; /* Espaçamento entre os itens do header */
+}
+
+.header-title h1 {
+    font-weight: 700;
+    font-size: 18px;
+    color: #0f1117;
+    margin: 0;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 6px 12px;
+    width: 300px;
+    background-color: white;
+    height: 32px;
+}
+
+.search-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    opacity: 0.6;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    font-size: 14px;
+    width: 100%;
+}
+
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: auto; /* Empurra para a direita */
+}
+
+.action-icon {
+    width: 32px;
+    height: 32px;
+    opacity: 0.7;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.action-icon:hover {
+    opacity: 1;
+}
+
+.content-area {
+    display: flex;
+    flex: 1;
+    overflow: hidden; /* Garante que o conteúdo não vaze */
 }
 
 /* Notes List */
 .notes-list {
-  width: 240px;
-  background: #fff;
-  border-right: 1px solid #ddd;
-  padding: 16px;
-  overflow-y: auto;
+    width: 280px; /* Aumentei um pouco a largura para mais espaço */
+    background: #fff;
+    border-right: 1px solid #ddd;
+    padding: 16px;
+    overflow-y: auto; /* Permite rolagem dentro da lista de notas */
 }
 
-.notes-list button {
-  width: 100%;
-  padding: 10px;
-  background-color: #6366f1;
-  color: white;
-  font-weight: bold;
-  border: none;
-  border-radius: 6px;
-  margin-bottom: 20px;
-  cursor: pointer;
+.create-note-btn {
+    width: 100%;
+    padding: 10px 15px;
+    background-color: #6366f1;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+}
+
+.create-note-btn:hover {
+    background-color: #4f46e5;
 }
 
 .note-preview {
-  padding: 10px;
-  margin-bottom: 10px;
-  border-left: 4px solid transparent;
-  cursor: pointer;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-left: 4px solid transparent;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, border-left-color 0.2s ease;
 }
 
 .note-preview:hover {
-  background: #f0f0f0;
+    background: #f0f0f0;
 }
 
 .note-preview.active {
-  border-left: 4px solid #6366f1;
-  background: #f0f0f0;
+    border-left: 4px solid #6366f1;
+    background: #f0f0f0;
 }
 
-.tagteam {
-
-display:flex
-
+.note-item {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
 }
 
-.tags {
-  font-size: 12px;
-  color: #555;
-  border-right: #555;
-  background-color: #f0f0f0;
-  padding: 2px 6px;
-  margin-right: 4px;
-  font-size: 12px;
-  border-radius: 4px;
-  color: #555;
+.note-img img {
+    width: 60px;
+    height: 60px; /* Defina uma altura fixa para as imagens de preview */
+    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+    border-radius: 8px;
+    display: block;
+}
+
+.note-info {
+    flex: 1;
+}
+
+.note-info strong {
+    display: block; /* Garante que o strong ocupe sua própria linha */
+    margin-bottom: 4px;
+    font-size: 15px;
+}
+
+.tags-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que as tags quebrem linha se houver muitas */
+    margin-bottom: 4px;
+}
+
+.tag {
+    background-color: #e5e7eb;
+    padding: 4px 8px;
+    margin-right: 6px;
+    border-radius: 4px;
+    font-size: 11px;
+    color: #555;
+    white-space: nowrap; /* Evita que a tag quebre o texto no meio */
 }
 
 /* Note Details */
 .note-details {
-  flex: 1;
-  padding: 20px;
-  background: white;
+    flex: 1;
+    padding: 24px;
+    background: white;
+    overflow-y: auto; /* Permite rolagem para conteúdo de nota grande */
 }
 
-.note-details img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 16px;
-  width: 588px;
+.note-actions-top {
+    display: flex;
+    justify-content: flex-end; /* Alinha os botões à direita */
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.note-actions-top .action-button {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: white;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+}
+
+.note-actions-top .action-button:hover {
+    background-color: #f0f0f0;
+}
+
+.note-actions-top .action-button img {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    object-fit: contain;
+    margin-bottom: 0; /* Override any previous margin-bottom */
+}
+
+.note-details-image {
+    max-width: 100%;
+    height: 200px; /* Altura fixa para a imagem do detalhe da nota */
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
 }
 
 .note-details h2 {
-  margin: 0 0 10px;
+    margin: 0 0 10px;
+    font-size: 24px;
+    color: #333;
 }
 
-.note-details .tags {
-  color: #888;
-  font-size: 13px;
-  border-right: #555;
+.note-details-tags {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 15px;
 }
 
-.save-cancel {
-  margin-top: 20px;
+.note-details small {
+    display: block;
+    color: #888;
+    margin-bottom: 20px;
 }
 
-.save-cancel button {
-  margin-right: 10px;
-  padding: 10px 14px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
+.optimization-list {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.optimization-list li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.save-cancel-buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end; /* Alinha os botões de salvar/cancelar à direita */
+}
+
+.save-cancel-buttons button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
 }
 
 .save-btn {
-  background: #4f46e5;
-  color: white;
+    background: #4f46e5;
+    color: white;
+}
+
+.save-btn:hover {
+    background: #3c33d5;
 }
 
 .cancel-btn {
-  background: #e5e7eb;
+    background: #e5e7eb;
+    color: #333;
 }
 
-.casinha {
-
-  height: 20px;
-  display: flex;
-  position: relative;
-  top: 0 px;
-
-  height: 19px;
+.cancel-btn:hover {
+    background: #d1d5db;
 }
 
-.cozinha {
-
-  display: flex;
-  align-items: center;
-  margin: 5px 0;
-  gap: 3px;
-
+/* Right Sidebar */
+.right-sidebar {
+    width: 250px;
+    background: white;
+    border-left: 1px solid #ddd;
+    padding: 20px;
+    box-sizing: border-box;
+    position: fixed; /* Fixa a sidebar na tela */
+    top: 0;
+    right: 0;
+    height: 100vh;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.05); /* Sombra suave */
+    z-index: 1000; /* Garante que ela fique acima de outros elementos */
 }
 
-.casinha-img-logo {
-
-  display: flex;
-  align-items: center;
-  width: 250px;
-
-}
-.casinha1 {
-
-  height: 20px;
-  display: flex;
-  position: relative;
-  top: 0 px;
-  height: 19px;
-}
-.cozinha-0 {
-
-  display: flex;
-  align-items: center;
-  margin: 5px 0;
-  gap: 3px;
-  background-color:	#e8e8e8;
-  border-radius: 5px;
-  
-
+.right-sidebar h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #333;
+    font-weight: 600;
 }
 
-.note-item {
-  display: flex;
-  gap: 12px;
-  align-items: flex-start;
+.right-sidebar ul {
+    list-style: none;
+    padding: 0;
 }
 
-.note-img img {
-  width: 60px; /* ou o tamanho que preferir */
-  border-radius: 8px;
-  display: block;
+.right-sidebar li {
+    padding: 10px 0;
+    font-size: 14px;
+    color: #555;
+    cursor: pointer;
+    transition: color 0.2s ease;
 }
 
-.note-info {
-  flex: 1;
-}
-
-hr { 
-  
-  border-top: #E0E4EA 1px;
-
-}
-
-.textos {
-
-display: flex;
-flex-direction: column;
-margin: 10px 0;
-gap: 20px;
-
-  }
-
-.pepino {
-
-  display: flex;
-  align-items: center;
-
-}
-
-.all, .notes {
-
- font-weight: 700;
-  font-size: 16px;
-  color: #0f1117; /* ou preto */
-  margin-right: 4px; /* espaço só entre eles */
+.right-sidebar li:hover {
+    color: #000;
 }
