@@ -106,7 +106,7 @@ flex: 1;
     padding: 16px 24px;
     background-color: white;
     border-bottom: 1px solid #ddd;
-    gap: 20px; /* Espaçamento entre os itens do header */
+    gap: 650px; /* Espaçamento entre os itens do header */
 }
 
 .header-title h1 {
@@ -114,6 +114,7 @@ flex: 1;
     font-size: 18px;
     color: #0f1117;
     margin: 0;
+    display: flex-end;
 }
 
 .search-box {
@@ -125,11 +126,12 @@ flex: 1;
     width: 300px;
     background-color: white;
     height: 32px;
+    margin-left: -700px;
 }
 
 .search-icon {
-    width: 16px;
-    height: 16px;
+    width: 24px;
+    height: 24px;
     margin-right: 8px;
     opacity: 0.6;
 }
@@ -145,7 +147,7 @@ flex: 1;
     display: flex;
     align-items: center;
     gap: 12px;
-    margin-left: auto; /* Empurra para a direita */
+    margin-left: -1360px; /* Empurra para a direita */
 }
 
 .action-icon {
@@ -269,7 +271,6 @@ flex: 1;
     width: 242px;
     height: 44px;
     justify-content: end;
-   
 }
 
 .note-actions-top .action-button {
@@ -282,7 +283,7 @@ flex: 1;
     cursor: pointer;
     font-size: 14px;
     transition: background-color 0.2s ease;
-  
+  margin-right: -10000px;
     
 }
 
@@ -349,6 +350,7 @@ flex: 1;
     font-size: 14px;
     font-weight: 600;
     transition: background-color 0.2s ease;
+
 }
 
 .save-btn {
