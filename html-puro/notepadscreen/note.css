@@ -9,7 +9,7 @@ body {
 
 /* Left Sidebar */
 .left-sidebar {
-    width: 250px;
+    width: 272px;
     background: white;
     border-right: 1px solid #ddd;
     padding: 20px;
@@ -31,7 +31,7 @@ body {
 }
 
 .left-sidebar .logo-img {
-    height: 24px; /* Ajuste o tamanho da imagem do logo */
+    height: 55px; /* Ajuste o tamanho da imagem do logo */
     margin-right: 8px;
 }
 
@@ -87,8 +87,17 @@ hr {
     flex: 1;
     display: flex;
     flex-direction: column;
-    margin-right: 250px; /* Espaço para a sidebar direita */
 }
+
+.main-content2 {
+
+flex: 1;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
 
 .main-header {
     display: flex;
@@ -209,8 +218,8 @@ hr {
 }
 
 .note-img img {
-    width: 60px;
-    height: 60px; /* Defina uma altura fixa para as imagens de preview */
+    width: 68px;
+    height: 95px; /* Defina uma altura fixa para as imagens de preview */
     object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
     border-radius: 8px;
     display: block;
@@ -245,16 +254,22 @@ hr {
 /* Note Details */
 .note-details {
     flex: 1;
-    padding: 24px;
+    padding:   90px;
     background: white;
     overflow-y: auto; /* Permite rolagem para conteúdo de nota grande */
-}
+    
+ }
 
 .note-actions-top {
     display: flex;
     justify-content: flex-end; /* Alinha os botões à direita */
     gap: 10px;
     margin-bottom: 20px;
+    display: block;
+    width: 242px;
+    height: 44px;
+    justify-content: end;
+   
 }
 
 .note-actions-top .action-button {
@@ -267,6 +282,8 @@ hr {
     cursor: pointer;
     font-size: 14px;
     transition: background-color 0.2s ease;
+  
+    
 }
 
 .note-actions-top .action-button:hover {
@@ -282,8 +299,8 @@ hr {
 }
 
 .note-details-image {
-    max-width: 100%;
-    height: 200px; /* Altura fixa para a imagem do detalhe da nota */
+    max-width: 540%;
+    height: 135px; /* Altura fixa para a imagem do detalhe da nota */
     object-fit: cover;
     border-radius: 8px;
     margin-bottom: 20px;
@@ -321,7 +338,7 @@ hr {
     margin-top: 30px;
     display: flex;
     gap: 10px;
-    justify-content: flex-end; /* Alinha os botões de salvar/cancelar à direita */
+    justify-content: end; /* Alinha os botões de salvar/cancelar à direita */
 }
 
 .save-cancel-buttons button {
