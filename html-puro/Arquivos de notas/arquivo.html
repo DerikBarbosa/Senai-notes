@@ -1,24 +1,25 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Senai Notes</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="note.css">
+    <link rel="stylesheet" href="arquivo.css">
 </head>
+
 <body>
 
     <aside class="left-sidebar">
         <div class="logo">
-            <img class="logo-img" src="../imgs/image.png" alt="Senai Notes Logo"> 
+            <img class="logo-img" src="../imgs/image.png" alt="Senai Notes Logo">
         </div>
 
         <div class="section">
             <ul>
                 <li class="nav-item active">
-                    <img class="nav-icon" src="../imgs/Home.png" alt="All Notes"> All Notes > 
+                    <img class="nav-icon" src="../imgs/Home.png" alt="All Notes"> All Notes >
                 </li>
                 <li class="nav-item">
                     <img class="nav-icon" src="../imgs/Archive.png" alt="Archived Notes"> Archived Notes
@@ -45,10 +46,10 @@
     </aside>
 
     <div class="main-content">
-        
+
         <header class="main-header">
             <div class="header-title">
-                <h1>All Notes</h1>
+                <h1>Archived Notes</h1>
             </div>
             <div class="search-box">
                 <img src="../imgs/Search.png" alt="Search" class="search-icon">
@@ -59,143 +60,80 @@
                 <img src="../imgs/Topbar Item.png" alt="User Profile" class="action-icon">
             </div>
         </header>
-        
+
         <div class="content-area">
             <div class="notes-list">
                 <button class="create-note-btn">+ Create New Note</button>
-
+                <div>
+                <h2>All your archived notes are stored here. You can restore or delete them anytime.</h2>
+        </div>
                 <div class="note-preview active">
                     <div class="note-item">
                         <div class="note-img">
                             <img src="../imgs/Rectangle 45.png" alt="React Performance Optimization">
                         </div>
                         <div class="note-info">
-                            <strong>React Performance Optimization</strong><br>
+                            <strong>TypeScript Migration Guide</strong><br>
+                            <div class="tags-container">
+                                <span class="tag">Dev</span>
+                                <span class="tag">React</span>
+                                <span class="tag">TypeScript</span>
+                            </div>
+                            <small>26 Oct 2024</small>
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="note-preview">
+                    <div class="note-item">
+                        <div class="note-img">
+                            <img src="../imgs/Rectangle 45 (5).png" alt="Japan Travel Planning">
+                        </div>
+                        <div class="note-info">
+                            <strong>Gift Ideas</strong><br>
+                            <div class="tags-container">
+                                <span class="tag">Shopping</span>
+                                <span class="tag">Personal</span>
+                            </div>
+                            <small>20 Oct 2024</small>
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="note-preview">
+                    <div class="note-item">
+                        <div class="note-img">
+                            <img src="../imgs/Rectangle 45.png" alt="Favorite Pasta Recipes">
+                        </div>
+                        <div class="note-info">
+                            <strong>React Component Library</strong><br>
                             <div class="tags-container">
                                 <span class="tag">Dev</span>
                                 <span class="tag">React</span>
                             </div>
-                            <small>29 Oct 2024</small>
-                        </div>
-                    </div>
-                </div>
-                
-                <hr>
-
-                <div class="note-preview">
-                    <div class="note-item">
-                        <div class="note-img">
-                            <img src="../imgs/Rectangle 47.png" alt="Japan Travel Planning">
-                        </div>
-                        <div class="note-info">
-                            <strong>Japan Travel Planning</strong><br>
-                            <div class="tags-container">
-                                <span class="tag">Travel</span>
-                                <span class="tag">Personal</span>
-                            </div>
-                            <small>28 Oct 2024</small>
+                            <small>15 Oct 2024</small>
                         </div>
                     </div>
                 </div>
 
-                <hr>
-
-                <div class="note-preview">
-                    <div class="note-item">
-                        <div class="note-img">
-                            <img src="../imgs/Rectangle 46.png" alt="Favorite Pasta Recipes">
-                        </div>
-                        <div class="note-info">
-                            <strong>Favorite Pasta Recipes</strong><br>
-                            <div class="tags-container">
-                                <span class="tag">Cooking</span>
-                                <span class="tag">Recipes</span>
-                            </div>
-                            <small>27 Oct 2024</small>
-                        </div>
-                    </div>
-                </div>
-                
-                <hr>
-                <div class="note-preview">
-                    <div class="note-item">
-                        <div class="note-img">
-                            <img src="../imgs/Rectangle 45 (1).png" alt="Weekly Workout Plan">
-                        </div>
-                        <div class="note-info">
-                            <strong>Weekly Workout Plan</strong><br>
-                            <div class="tags-container">
-                                <span class="tag">Dev</span>
-                                <span class="tag">React</span>
-                            </div>
-                            <small>25 Oct 2024</small>
-                        </div>
-                    </div>
-                </div>
-                <hr>
-                
-                <div class="note-preview">
-                    <div class="note-item">
-                        <div class="note-img">
-                            <img src="../imgs/Rectangle 45 (2).png" alt="Meal Prep Ideas">
-                        </div>
-                        <div class="note-info">
-                            <strong>Meal Prep Ideas</strong><br>
-                            <div class="tags-container">
-                                <span class="tag">Cooking</span>
-                                <span class="tag">Health</span>
-                            </div>
-                            <small>12 Oct 2024</small>
-                        </div>
-                    </div>
-                </div>
-                <hr>
-
-                <div class="note-preview">
-                    <div class="note-item">
-                        <div class="note-img">
-                            <img src="../imgs/Rectangle 45 (3).png" alt="Reading List">
-                        </div>
-                        <div class="note-info">
-                            <strong>Reading List</strong><br>
-                            <div class="tags-container">
-                                <span class="tag">Personal</span>
-                                <span class="tag">Dev</span>
-                            </div>
-                            <small>05 Oct 2024</small>
-                        </div>
-                    </div>
-                </div>
-                <hr>
-
-                <div class="note-preview">
-                    <div class="note-item">
-                        <div class="note-img">
-                            <img src="../imgs/Rectangle 45 (4).png" alt="Fitness Goals 2025">
-                        </div>
-                        <div class="note-info">
-                            <strong>Fitness Goals 2025</strong><br>
-                            <div class="tags-container">
-                                <span class="tag">Fitness</span>
-                                <span class="tag">Health</span>
-                                <span class="tag">Personal</span>
-                            </div>
-                            <small>22 Sep 2024</small>
-                        </div>
-                    </div>
-                </div>
                 <hr>
 
             </div>
 
             <div class="note-details">
                 <div class="note-actions-top">
-                    <button class="action-button"><img src="../imgs/Archive.png" alt="Archive Note"> Archive Note</button>
-                    <button class="action-button delete-button"><img src="../imgs/Delete.png" alt="Delete Note"> Delete Note</button>
+                    <button class="action-button"><img src="../imgs/Archive.png" alt="Archive Note"> Archive
+                        Note</button>
+                    <button class="action-button delete-button"><img src="../imgs/Delete.png" alt="Delete Note"> Delete
+                        Note</button>
                 </div>
                 <img src="../imgs/Rectangle 44.png" alt="React Logo" class="note-details-image">
-                <h2>React Performance Optimization</h2>
-                <div class="note-details-tags">Dev, React</div>
+                <h2>TypeScript Migration Guide</h2>
+                <div class="note-details-tags">Dev, React, TypeScript</div>
                 <small>Last edited: 29 Oct 2024</small>
 
                 <hr>
@@ -204,24 +142,26 @@
 
                 <ol class="optimization-list">
                     <li>
-                        <strong>Code Splitting</strong><br>
-                        - Use `React.lazy()` for route-based splitting<br>
-                        - Implement dynamic imports for heavy components
+                        <strong>Initial Setup</strong><br>
+                        - Install TypeScript dependencies<br>
+                        - Configure tsconfig.json<br>
+                        - Set up build pipeline<br>
                     </li>
                     <li>
-                        <strong>Memoization</strong><br>
-                        - `useMemo` for expensive calculations<br>
-                        - `useCallback` for function props<br>
-                        - `React.memo` for component optimization
+                        <strong>Migration Strategy</strong><br>
+                        - Start with newer modules<br>
+                        - Add type definitions gradually<br>
+                        - Use 'any' temporarily for complex cases
                     </li>
                     <li>
-                        <strong>Virtual List Implementation</strong><br>
-                        - Use `react-window` for long lists<br>
-                        - Implement infinite scrolling
+                        <strong>Testing Approach</strong><br>
+                        - Update test configuration<br>
+                        - Add type testing<br>
+                        - Validate build process<br>
                     </li>
                 </ol>
 
-                <p><strong>TODO:</strong> Benchmark current application and identify bottlenecks</p>
+                <p><strong>Deadline:</strong>End of Q4 2024</p>
 
                 <hr>
 
@@ -233,7 +173,8 @@
         </div>
     </div>
 
-    
+
 
 </body>
+
 </html>
