@@ -192,7 +192,7 @@ flex: 1;
 }
 
 .create-note-btn:hover {
-    background-color: #4f46e5;
+    background-color: #335CFF;
 }
 
 .note-preview {
@@ -283,7 +283,7 @@ flex: 1;
     cursor: pointer;
     font-size: 14px;
     transition: background-color 0.2s ease;
-  margin-right: -10000px;
+    
     
 }
 
@@ -339,7 +339,7 @@ flex: 1;
     margin-top: 30px;
     display: flex;
     gap: 10px;
-    justify-content: end; /* Alinha os botões de salvar/cancelar à direita */
+    justify-content: flex-start; /* Alinha os botões de salvar/cancelar à direita */
 }
 
 .save-cancel-buttons button {
@@ -354,7 +354,7 @@ flex: 1;
 }
 
 .save-btn {
-    background: #4f46e5;
+    background: #335CFF;
     color: white;
 }
 
@@ -371,41 +371,19 @@ flex: 1;
     background: #d1d5db;
 }
 
-/* Right Sidebar */
-.right-sidebar {
-    width: 250px;
-    background: white;
-    border-left: 1px solid #ddd;
-    padding: 20px;
-    box-sizing: border-box;
-    position: fixed; /* Fixa a sidebar na tela */
-    top: 0;
-    right: 0;
-    height: 100vh;
-    box-shadow: -2px 0 5px rgba(0,0,0,0.05); /* Sombra suave */
-    z-index: 1000; /* Garante que ela fique acima de outros elementos */
-}
-
-.right-sidebar h3 {
-    font-size: 16px;
-    margin-bottom: 15px;
-    color: #333;
-    font-weight: 600;
-}
-
-.right-sidebar ul {
-    list-style: none;
-    padding: 0;
-}
-
-.right-sidebar li {
-    padding: 10px 0;
-    font-size: 14px;
-    color: #555;
+.note-details {
+    flex: 1;
+    padding:   90px;
+    background-color: white;
+    overflow-y: auto; /* Permite rolagem para conteúdo de nota grande */
+     width: 258px; /* Aumentei um pouco a largura para mais espaço */
+    border-right: 1px solid #ddd;
+    padding: 16px;
+    overflow-y: auto; /* Permite rolagem dentro da lista de notas */
+   
+    border-left: 4px solid transparent;
     cursor: pointer;
-    transition: color 0.2s ease;
-}
-
-.right-sidebar li:hover {
-    color: #000;
+    border-radius: 4px;
+  
+    margin-right: 300px;
 }
