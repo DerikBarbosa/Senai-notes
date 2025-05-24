@@ -31,7 +31,7 @@ body {
 }
 
 .left-sidebar .logo-img {
-    height: 24px; /* Ajuste o tamanho da imagem do logo */
+    height: 55px; /* Ajuste o tamanho da imagem do logo */
     margin-right: 8px;
 }
 
@@ -349,43 +349,4 @@ hr {
 
 .cancel-btn:hover {
     background: #d1d5db;
-}
-
-/* Right Sidebar */
-.right-sidebar {
-    width: 250px;
-    background: white;
-    border-left: 1px solid #ddd;
-    padding: 20px;
-    box-sizing: border-box;
-    position: fixed; /* Fixa a sidebar na tela */
-    top: 0;
-    right: 0;
-    height: 100vh;
-    box-shadow: -2px 0 5px rgba(0,0,0,0.05); /* Sombra suave */
-    z-index: 1000; /* Garante que ela fique acima de outros elementos */
-}
-
-.right-sidebar h3 {
-    font-size: 16px;
-    margin-bottom: 15px;
-    color: #333;
-    font-weight: 600;
-}
-
-.right-sidebar ul {
-    list-style: none;
-    padding: 0;
-}
-
-.right-sidebar li {
-    padding: 10px 0;
-    font-size: 14px;
-    color: #555;
-    cursor: pointer;
-    transition: color 0.2s ease;
-}
-
-.right-sidebar li:hover {
-    color: #000;
 }
