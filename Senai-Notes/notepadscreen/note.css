@@ -1,0 +1,423 @@
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    min-height: 100vh; /* Use min-height para permitir rolagem */
+    background: #f5f5f5;
+    color: #333;
+}
+
+/* Left Sidebar */
+.left-sidebar {
+    width: 272px;
+    background: white;
+    border-right: 1px solid #ddd;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    position: sticky; /* Sticky para que ela fixe ao rolar, se necessário */
+    top: 0;
+    height: 100vh; /* Ocupa a altura total da viewport */
+}
+
+.left-sidebar .logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+.left-sidebar .logo-img {
+    height: 55px; /* Ajuste o tamanho da imagem do logo */
+    margin-right: 8px;
+}
+
+.left-sidebar .section {
+    margin-bottom: 20px;
+}
+
+.left-sidebar .section h3 {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #666;
+}
+
+.left-sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.left-sidebar .nav-item {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 6px;
+    margin-bottom: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.left-sidebar .nav-item:hover {
+    background: #f0f0f0;
+}
+
+.left-sidebar .nav-item.active {
+    background-color: #e8e8e8;
+    font-weight: 600;
+}
+
+.left-sidebar .nav-icon {
+    height: 18px;
+    margin-right: 8px;
+    opacity: 0.7;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 15px 0;
+}
+
+/* Main Content Area */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content2 {
+
+flex: 1;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+    gap: 650px; /* Espaçamento entre os itens do header */
+}
+
+.header-title h1 {
+    font-weight: 700;
+    font-size: 18px;
+    color: #0f1117;
+    margin: 0;
+    display: flex-end;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 6px 12px;
+    width: 300px;
+    background-color: white;
+    height: 32px;
+    margin-left: -700px;
+}
+
+.search-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    opacity: 0.6;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    font-size: 14px;
+    width: 100%;
+}
+
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: -1360px; /* Empurra para a direita */
+}
+
+.action-icon {
+    width: 32px;
+    height: 32px;
+    opacity: 0.7;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.action-icon:hover {
+    opacity: 1;
+}
+
+.content-area {
+    display: flex;
+    flex: 1;
+    overflow: hidden; /* Garante que o conteúdo não vaze */
+}
+
+/* Notes List */
+.notes-list {
+    width: 280px; /* Aumentei um pouco a largura para mais espaço */
+    background: #fff;
+    border-right: 1px solid #ddd;
+    padding: 16px;
+    overflow-y: auto; /* Permite rolagem dentro da lista de notas */
+}
+
+.create-note-btn {
+    width: 100%;
+    padding: 10px 15px;
+    background-color: #6366f1;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+}
+
+.create-note-btn:hover {
+    background-color: #335CFF;
+}
+
+.note-preview {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-left: 4px solid transparent;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, border-left-color 0.2s ease;
+}
+
+.note-preview:hover {
+    background: #f0f0f0;
+}
+
+.note-preview.active {
+    border-left: 4px solid #6366f1;
+    background: #f0f0f0;
+}
+
+.note-item {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.note-img img {
+    width: 68px;
+    height: 95px; /* Defina uma altura fixa para as imagens de preview */
+    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+    border-radius: 8px;
+    display: block;
+}
+
+.note-info {
+    flex: 1;
+}
+
+.note-info strong {
+    display: block; /* Garante que o strong ocupe sua própria linha */
+    margin-bottom: 4px;
+    font-size: 15px;
+}
+
+.tags-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que as tags quebrem linha se houver muitas */
+    margin-bottom: 4px;
+}
+
+.tag {
+    background-color: #e5e7eb;
+    padding: 4px 8px;
+    margin-right: 6px;
+    border-radius: 4px;
+    font-size: 11px;
+    color: #555;
+    white-space: nowrap; /* Evita que a tag quebre o texto no meio */
+}
+
+/* Note Details */
+.note-details {
+    flex: 1;
+    padding:   30px;
+    background: white;
+    overflow-y: auto; /* Permite rolagem para conteúdo de nota grande */
+    
+ }
+
+.note-actions-top {
+    display: flex;
+    justify-content: flex-end; /* Alinha os botões à direita */
+   gap: 100px;
+    margin-bottom: 20px;
+    display: block;
+    width: 258px;
+    height: 44px;
+    justify-content: end;
+}
+
+.note-actions-top .action-button {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: white;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+    width: 242px;
+    height: 44px;
+    
+}
+
+.note-actions-top .action-button:hover {
+    background-color: #f0f0f0;
+
+}
+
+.note-actions-top .action-button img {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    object-fit: contain;
+    margin-bottom: 0; /* Override any previous margin-bottom */
+}
+
+
+
+
+
+.note-details-image {
+    max-width: 540%;
+    height: 135px; /* Altura fixa para a imagem do detalhe da nota */
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.note-details h2 {
+    margin: 0 0 10px;
+    font-size: 24px;
+    color: #333;
+}
+
+.note-details-tags {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.note-details small {
+    display: block;
+    color: #888;
+    margin-bottom: 20px;
+}
+
+.optimization-list {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.optimization-list li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.save-cancel-buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start; /* Alinha os botões de salvar/cancelar à direita */
+}
+
+.save-cancel-buttons button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+
+}
+
+.save-btn {
+    background: #335CFF;
+    color: white;
+}
+
+.save-btn:hover {
+    background: #3c33d5;
+}
+
+.cancel-btn {
+    background: #e5e7eb;
+    color: #333;
+}
+
+.cancel-btn:hover {
+    background: #d1d5db;
+}
+
+.right-sidebar {
+   
+   width: 258px; /* Aumentei um pouco a largura para mais espaço */
+    background: #fff;
+    border-right: 1px solid #ddd;
+    padding: 16px;
+    overflow-y: auto; /* Permite rolagem dentro da lista de notas */
+  
+    border-left: 1px solid #ddd;
+   
+
+}
+.note-actions-top2 .action-button2 {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: white;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+    width: 242px;
+    height: 44px;
+
+}
+ 
+.note-actions-top2 .action-button2:hover {
+    background-color: #f0f0f0;
+
+}
+
+.note-actions-top2 .action-button2 img {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    object-fit: contain;
+    margin-bottom: 0; /* Override any previous margin-bottom */
+}
+.note-actions-top2 {
+
+gap: 900000px;
+
+}
