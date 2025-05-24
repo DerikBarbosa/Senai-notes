@@ -1,4 +1,5 @@
-/* Reset básico */
+/* global.css */
+
 * {
   margin: 0;
   padding: 0;
@@ -6,167 +7,46 @@
   font-family: 'Inter', sans-serif;
 }
 
-/* Container geral */
-.login-container {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #f5f5f5;
-}
-
-/* Caixa branca central */
-.login-box {
-  background: white;
-  padding: 40px 30px;
-  border-radius: 8px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
-  width: 360px;
-  text-align: center;
-}
-
-/* Logo */
-.logo {
-  width: 150px;
-  margin-bottom: 20px;
-}
-
-/* Títulos */
-h2 {
-  font-weight: 700;
+body {
+  background-color: #f8f9fa;
   color: #333;
-  margin-bottom: 10px;
 }
 
-.subtitle {
-  color: #666;
-  font-weight: 500;
-  margin-bottom: 30px;
-}
-
-/* Form */
-form {
-  text-align: left;
-}
-
-/* Labels */
-label {
-  display: block;
-  margin-bottom: 6px;
-  font-weight: 600;
-  color: #444;
-}
-
-/* Inputs */
-input[type="email"],
-input[type="password"],
-input[type="text"] {
-  width: 100%;
-  padding: 10px 12px;
-  margin-bottom: 20px;
-  border: 1.8px solid #ccc;
-  border-radius: 6px;
-  font-size: 14px;
-  transition: border-color 0.3s ease;
-}
-
-input[type="email"]:focus,
-input[type="password"]:focus,
-input[type="text"]:focus {
-  border-color: #007bff;
-  outline: none;
-}
-
-/* Campo senha com toggle */
-.password-field {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-.password-field input {
-  flex: 1;
-  margin-bottom: 0;
-}
-
-.toggle-password {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  color: #007bff;
-  font-weight: 600;
-  margin-left: 8px;
-  user-select: none;
-  padding: 0 6px;
-  font-size: 14px;
-}
-
-/* Botão login e signup */
-.login-button {
-  width: 100%;
-  padding: 12px 0;
-  background-color: #007bff;
-  border: none;
-  border-radius: 6px;
-  color: white;
-  font-weight: 700;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-top: 10px;
-}
-
-.login-button:hover {
-  background-color: #0056b3;
-}
-
-/* Divisor */
-.divider {
-  margin: 20px 0;
-  border: none;
-  border-top: 1.5px solid #eee;
-}
-
-/* Links */
 a {
   color: #007bff;
   text-decoration: none;
-  font-weight: 600;
-  cursor: pointer;
 }
 
 a:hover {
   text-decoration: underline;
 }
 
-/* Texto de cadastro/login */
-.signup {
-  text-align: center;
-  font-size: 14px;
-  color: #555;
-  margin-top: 15px;
+input, button {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.6em;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  outline: none;
 }
 
-/* Icon info */
-.icon h5 {
-  color: #888;
-  font-weight: 400;
-  font-size: 13px;
-  margin-top: -10px;
-  margin-bottom: 20px;
+input:focus {
+  border-color: #007bff;
 }
 
-/* Classe forgot no link do label password */
-.forgot {
-  font-size: 13px;
-  float: right;
-  color: #007bff;
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
 }
 
-/* Responsividade básica */
-@media (max-width: 400px) {
-  .login-box {
-    width: 90%;
-    padding: 30px 20px;
-  }
+button:hover {
+  background-color: #0056b3;
+}
+
+hr.divider {
+  margin: 1.5em 0;
+  border: none;
+  border-top: 1px solid #ccc;
 }
