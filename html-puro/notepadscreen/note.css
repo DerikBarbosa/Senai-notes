@@ -256,7 +256,7 @@ flex: 1;
 /* Note Details */
 .note-details {
     flex: 1;
-    padding:   90px;
+    padding:   30px;
     background: white;
     overflow-y: auto; /* Permite rolagem para conteúdo de nota grande */
     
@@ -265,10 +265,10 @@ flex: 1;
 .note-actions-top {
     display: flex;
     justify-content: flex-end; /* Alinha os botões à direita */
-    gap: 10px;
+   gap: 100px;
     margin-bottom: 20px;
     display: block;
-    width: 242px;
+    width: 258px;
     height: 44px;
     justify-content: end;
 }
@@ -283,12 +283,14 @@ flex: 1;
     cursor: pointer;
     font-size: 14px;
     transition: background-color 0.2s ease;
-    
+    width: 242px;
+    height: 44px;
     
 }
 
 .note-actions-top .action-button:hover {
     background-color: #f0f0f0;
+
 }
 
 .note-actions-top .action-button img {
@@ -298,6 +300,10 @@ flex: 1;
     object-fit: contain;
     margin-bottom: 0; /* Override any previous margin-bottom */
 }
+
+
+
+
 
 .note-details-image {
     max-width: 540%;
@@ -371,19 +377,47 @@ flex: 1;
     background: #d1d5db;
 }
 
-.note-details {
-    flex: 1;
-    padding:   90px;
-    background-color: white;
-    overflow-y: auto; /* Permite rolagem para conteúdo de nota grande */
-     width: 258px; /* Aumentei um pouco a largura para mais espaço */
+.right-sidebar {
+   
+   width: 258px; /* Aumentei um pouco a largura para mais espaço */
+    background: #fff;
     border-right: 1px solid #ddd;
     padding: 16px;
     overflow-y: auto; /* Permite rolagem dentro da lista de notas */
-   
-    border-left: 4px solid transparent;
-    cursor: pointer;
-    border-radius: 4px;
   
-    margin-right: 300px;
+    border-left: 1px solid #ddd;
+   
+
+}
+.note-actions-top2 .action-button2 {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: white;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+    width: 242px;
+    height: 44px;
+
+}
+ 
+.note-actions-top2 .action-button2:hover {
+    background-color: #f0f0f0;
+
+}
+
+.note-actions-top2 .action-button2 img {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    object-fit: contain;
+    margin-bottom: 0; /* Override any previous margin-bottom */
+}
+.note-actions-top2 {
+
+gap: 900000px;
+
 }
