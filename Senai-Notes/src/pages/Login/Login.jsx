@@ -29,7 +29,7 @@ function Login() {
         localStorage.setItem("meuId", userId);
 
         // Redireciona para /Notes
-        window.location.href = "/Notes";
+        // window.location.href = "/Notes";
       } else if (response.status === 401) {
         alert("Suas credenciais estão incorretas. Tente novamente.");
       } else {
