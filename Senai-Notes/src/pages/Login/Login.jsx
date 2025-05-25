@@ -1,10 +1,10 @@
-import { useState } from "react";
-import logo from "../../assets/imgs/logo.png";
-import "./login.css";
+import { useState } from 'react';
+import logo from '../../assets/imgs/logo.png';
+import './login.css';
 
 function Login() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
 
   const togglePasswordVisibility = () => {
@@ -14,30 +14,36 @@ function Login() {
   const onLoginClick = async (e) => {
     e.preventDefault();
 
-   
     try {
-      let response = await fetch("https://apisenainotas-01-fddghxaxcna9augw.canadacentral-01.azurewebsites.net");
+      const response = await fetch(
+        'https://apisenainotas-01-fddghxaxcna9augw.canadacentral-01.azurewebsites.net/login',
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, password }),
+        }
+      );
 
       if (response.ok) {
-        alert("Login realizado com sucesso!");
+        alert('Login realizado com sucesso!');
         let json = await response.json();
 
         let token = json.acessToken;
         let userId = json.user.id;
 
-        localStorage.setItem("meuToken", token);
-        localStorage.setItem("meuId", userId);
+        localStorage.setItem('meuToken', token);
+        localStorage.setItem('meuId', userId);
 
-        // Redireciona para /Notes
-        // window.location.href = "/Notes";
+        // Redireciona para /notes futuramente
+        // window.location.href = '/notes';
       } else if (response.status === 401) {
-        alert("Suas credenciais estão incorretas. Tente novamente.");
+        alert('Suas credenciais estão incorretas. Tente novamente.');
       } else {
-        alert("Erro inesperado ocorreu. Caso continue, contate um administrador.");
+        alert('Erro inesperado ocorreu. Caso continue, contate um administrador.');
       }
-    } catch (err) {
-      alert("Erro na conexão com os servidores.");
-      console.error(err);
+    } catch (error) {
+      alert('Erro na conexão com os servidores.');
+      console.error(error);
     }
   };
 
@@ -64,14 +70,14 @@ function Login() {
           </label>
           <div className="password-field">
             <input
-              type={showPassword ? "text" : "password"}
+              type={showPassword ? 'text' : 'password'}
               id="password"
               required
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
             <button type="button" className="toggle-password" onClick={togglePasswordVisibility}>
-              {showPassword ? "Hide" : "Show"}
+              {showPassword ? 'Hide' : 'Show'}
             </button>
           </div>
 
