@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f7f9fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-container {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  width: 480px; /* aumento para comportar os campos */
+}
+
+.login-box {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  width: 444px;
+  margin-bottom: 1rem;
+}
+.logo-image{
+  align-items: center;
+  justify-content: center;
+
+
+}
+
+h2 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+.subtitle {
+  font-size: 0.85rem;
+  color: #525866;
+  margin-bottom: 1.2rem;
+}
+
+form {
+  text-align: left;
+}
+
+label {
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  display: block;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 444px; /* igual ao logo */
+  max-width: 100%;
+  padding: 0.7rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-top: 0.3rem;
+  box-sizing: border-box;
+
+}
+
+.password-field {
+  position: relative;
+  width: 444px;
+  max-width: 100%;
+  margin-top: 0.3rem;
+}
+.password-field input {
+  width: 200%;
+  padding: 0.7rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding-right: 10px;
+  box-sizing: border-box;
+
+}
+
+.password-field .toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 20px; /* Aumente este valor para mover o olho mais para a direita */
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 1.2rem; /* ou o tamanho que o JS usa para o olho */
+  cursor: pointer;
+  padding: 0;
+  padding-right: 40px;
+}
+
+.forgot {
+  float: right;
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: #3b82f6;
+}
+
+.login-button {
+  width: 100%;
+  background-color: #3b82f6;
+  color: white;
+  font-size: 1rem;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 6px;
+  margin-top: 1.5rem;
+  cursor: pointer;
+}
+
+.divider {
+  margin: 1.5rem 0 0.5rem;
+  border: none;
+  border-top: 1px solid #ccc;
+}
+
+.signup {
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.signup a {
+  color: #3b82f6;
+  text-decoration: none;
+}
+
+.icon{
+
+    display: flex;
+    margin-top: auto;
+    gap: 5px;
+    opacity: 0.3;
+    font-size: 15px;
+
+}

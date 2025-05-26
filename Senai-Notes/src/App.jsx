@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+=======
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Login from "./pages/login";
+import Chat from "./pages/create";
+import NewUser from "./pages/note";
+>>>>>>> parent of 485db0f (aaaa)
 
 function App() {
   const [count, setCount] = useState(0)
