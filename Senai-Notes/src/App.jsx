@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Login from "./pages/login";
-import CreateAccount from "./pages/CreateAccount";
+import Login from "./pages/Login/index.jsx";
+import CreateAccount from "./pages/CreateAccount/index.jsx";
 
 
 function App() {
@@ -29,8 +29,8 @@ function App() {
 
           <Route path="/" element={<Login/>}></Route>
           <Route path="/login" element={<Login/>}></Route>
-          <Route path="/create" element={isAuthenticated() == true? <Chat/> : <Login/>}></Route>
-          <Route path="/notes" element={<NewUser/>}></Route>
+          <Route path="/create" element={isAuthenticated() == true? <CreateAccount/> : <Login/>}></Route>
+          <Route path="/notes" element={<note/>}></Route>
           <Route path="*" element={<h1>Not Found</h1>}></Route>
 
         </Routes>

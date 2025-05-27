@@ -1,9 +1,9 @@
-
 import { useState } from 'react';
 import logo from '../../assets/imgs/logo.png';
-import './create.css';
+import Show from "../../assets/imgs/Show.png"
+import './login.css';
 
-function CreateAccount() {
+function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
@@ -12,15 +12,12 @@ function CreateAccount() {
     setShowPassword((prev) => !prev);
   };
 
-  const onNewUserClick = async (e) => {
+  const onLoginClick = async (e) => {
     e.preventDefault();
-
-    if (!email.trim()) return alert('Preencha o e-mail.');
-    if (!password) return alert('Preencha a senha.');
 
     try {
       const response = await fetch(
-        'https://apisenainotas-01-fddghxaxcna9augw.canadacentral-01.azurewebsites.net/register',
+        'https://apisenainotas-01-fddghxaxcna9augw.canadacentral-01.azurewebsites.net/login',
         {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -29,14 +26,25 @@ function CreateAccount() {
       );
 
       if (response.ok) {
-        alert('Você criou sua conta com sucesso!');
-        window.location.href = '/login';
+        alert('Login realizado com sucesso!');
+        let json = await response.json();
+
+        let token = json.acessToken;
+        let userId = json.user.id;
+
+        localStorage.setItem('meuToken', token);
+        localStorage.setItem('meuId', userId);
+
+        // Redireciona para /notes futuramente
+        // window.location.href = '/notes';
+      } else if (response.status === 401) {
+        alert('Suas credenciais estão incorretas. Tente novamente.');
       } else {
-        alert('Erro ao criar a conta. Verifique os dados ou tente novamente.');
+        alert('Erro inesperado ocorreu. Caso continue, contate um administrador.');
       }
-    } catch (err) {
-      alert('Erro na conexão com o servidor.');
-      console.error(err);
+    } catch (error) {
+      alert('Erro na conexão com os servidores.');
+      console.error(error);
     }
   };
 
@@ -44,12 +52,10 @@ function CreateAccount() {
     <div className="login-container">
       <div className="login-box">
         <img src={logo} alt="Senai Notes Logo" className="logo" />
-        <h2>Create Your Account</h2>
-        <p className="subtitle">
-          Sign up to start organizing your notes and boost your productivity.
-        </p>
+        <h2>Welcome to Note</h2>
+        <p className="subtitle">Please log in to continue</p>
 
-        <form onSubmit={onNewUserClick}>
+        <form onSubmit={onLoginClick}>
           <label htmlFor="email">Email Address</label>
           <input
             type="email"
@@ -60,7 +66,9 @@ function CreateAccount() {
             onChange={(e) => setEmail(e.target.value)}
           />
 
-          <label htmlFor="password">Password</label>
+          <label htmlFor="password">
+            Password <a href="#" className="forgot">Forgot?</a>
+          </label>
           <div className="password-field">
             <input
               type={showPassword ? 'text' : 'password'}
@@ -74,20 +82,16 @@ function CreateAccount() {
             </button>
           </div>
 
-          <div className="icon">
-            <h5 style={{ fontFamily: 'Inter, sans-serif' }}>At least 8 characters</h5>
-          </div>
-
-          <button type="submit" className="login-button">Sign up</button>
+          <button type="submit" className="login-button">Login</button>
           <hr className="divider" />
         </form>
 
         <p className="signup">
-          Already have an account? <a href="/login">Login</a>
+          No account yet? <a href="/create">Sign Up</a>
         </p>
       </div>
     </div>
   );
 }
 
-export default CreateAccount;
+export default Login;
