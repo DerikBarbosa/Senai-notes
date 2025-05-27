@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -47,7 +48,7 @@ h2 {
 
 .subtitle {
   font-size: 0.85rem;
-  color: #525866;
+  color: #888;
   margin-bottom: 1.2rem;
 }
 
@@ -137,14 +138,4 @@ input[type="password"] {
 .signup a {
   color: #3b82f6;
   text-decoration: none;
-}
-
-.icon{
-
-    display: flex;
-    margin-top: auto;
-    gap: 5px;
-    opacity: 0.3;
-    font-size: 15px;
-
 }
