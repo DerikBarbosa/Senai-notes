@@ -1,6 +1,7 @@
 
 import { useState } from 'react';
 import logo from '../../assets/imgs/logo.png';
+import Show from "../../assets/imgs/Show.png"
 import './create.css';
 
 function CreateAccount() {

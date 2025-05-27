@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Login from "./pages/Login/index.jsx";
-import CreateAccount from "./pages/CreateAccount/create.jsx";
+import CreateAccount from "./pages/CreateAccount/index.jsx";
 
 
 function App() {

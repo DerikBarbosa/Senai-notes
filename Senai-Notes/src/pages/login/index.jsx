@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import logo from '../../assets/imgs/logo.png';
+import Show from "../../assets/imgs/Show.png"
 import './login.css';
 
 function Login() {
@@ -86,7 +87,7 @@ function Login() {
         </form>
 
         <p className="signup">
-          No account yet? <a href="/create-account">Sign Up</a>
+          No account yet? <a href="/create">Sign Up</a>
         </p>
       </div>
     </div>
