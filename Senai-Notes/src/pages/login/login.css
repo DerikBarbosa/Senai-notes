@@ -82,7 +82,7 @@ input[type="password"] {
   margin-top: 0.3rem;
 }
 .password-field input {
-  width: 200%;
+  width: 444px;
   padding: 0.7rem;
   font-size: 1rem;
   border: 1px solid #ccc;
@@ -103,6 +103,7 @@ input[type="password"] {
   cursor: pointer;
   padding: 0;
   padding-right: 40px;
+  
 }
 
 .forgot {

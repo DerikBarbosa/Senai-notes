@@ -185,7 +185,7 @@ hr {
 }
 
 .note-preview {
-    margin-bottom: 0px;
+    margin-bottom: 20px;
     border-left: 4px solid transparent;
     cursor: pointer;
     border-radius: 4px;
@@ -203,7 +203,7 @@ hr {
 
 .note-item {
     display: flex;
-    gap: 5px;
+    gap: 16px;
     align-items: flex-start;
 }
 

@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import logo from '../../assets/imgs/logo.png';
-import Show from "../../assets/imgs/Show.png";
-
+import Show from "../../assets/imgs/Show.png"
 import './login.css';
 
 function Login() {
@@ -18,7 +17,7 @@ function Login() {
 
     try {
       const response = await fetch(
-        'https://apisenainotas-01-fddghxaxcna9augw.canadacentral-01.azurewebsites.net/login',
+        'https://apisenainotas-01-fddghxaxcna9augw.canadacentral-01.azurewebsites.net/Login',
         {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -78,16 +77,8 @@ function Login() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-            <button
-              type="button"
-              className="toggle-password"
-              onClick={togglePasswordVisibility}
-            >
-              <img
-                src={showPassword ? Hide : Show}
-                alt={showPassword ? "Hide password" : "Show password"}
-                className="show-password-icon"
-              />
+            <button type="button" className="toggle-password" onClick={togglePasswordVisibility}>
+              <img className='olhos' src={Show} alt="olhinho" />
             </button>
           </div>
 

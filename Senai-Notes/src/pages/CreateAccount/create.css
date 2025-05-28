@@ -82,7 +82,7 @@ input[type="password"] {
   margin-top: 0.3rem;
 }
 .password-field input {
-  width: 200%;
+  width: 444px;
   padding: 0.7rem;
   font-size: 1rem;
   border: 1px solid #ccc;
@@ -95,7 +95,7 @@ input[type="password"] {
 .password-field .toggle-password {
   position: absolute;
   top: 50%;
-  right: 20px; /* Aumente este valor para mover o olho mais para a direita */
+  right: -20px; /* Aumente este valor para mover o olho mais para a direita */
   transform: translateY(-50%);
   background: none;
   border: none;
@@ -103,6 +103,7 @@ input[type="password"] {
   cursor: pointer;
   padding: 0;
   padding-right: 40px;
+margin-top: 5px;
 }
 
 .forgot {
@@ -147,5 +148,12 @@ input[type="password"] {
     gap: 5px;
     opacity: 0.3;
     font-size: 15px;
+
+}
+
+.olhos { 
+
+float: inline-end;
+
 
 }
