@@ -1,7 +1,7 @@
 
 import { useState } from 'react';
 import logo from '../../assets/imgs/logo.png';
-import Show from "../../assets/imgs/Show.png"
+import Show from "../../assets/imgs/Show.png";
 import './create.css';
 
 function CreateAccount() {
@@ -71,7 +71,7 @@ function CreateAccount() {
               onChange={(e) => setPassword(e.target.value)}
             />
             <button type="button" className="toggle-password" onClick={togglePasswordVisibility}>
-              {showPassword ? 'Hide' : 'Show'}
+             <img className='olhos' src={Show} alt="olhinhos" />
             </button>
           </div>
 

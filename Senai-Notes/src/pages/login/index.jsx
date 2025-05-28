@@ -78,7 +78,7 @@ function Login() {
               onChange={(e) => setPassword(e.target.value)}
             />
             <button type="button" className="toggle-password" onClick={togglePasswordVisibility}>
-              {showPassword ? 'Hide' : 'Show'}
+              <img className='olhos' src={Show} alt="olhinhos" />
             </button>
           </div>
 
