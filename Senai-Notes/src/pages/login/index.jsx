@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import logo from '../../assets/imgs/logo.png';
-import Show from "../../assets/imgs/Show.png"
+import Show from "../../assets/imgs/Show.png";
+
 import './login.css';
 
 function Login() {
@@ -77,8 +78,16 @@ function Login() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-            <button type="button" className="toggle-password" onClick={togglePasswordVisibility}>
-              {showPassword ? 'Hide' : 'Show'}
+            <button
+              type="button"
+              className="toggle-password"
+              onClick={togglePasswordVisibility}
+            >
+              <img
+                src={showPassword ? Hide : Show}
+                alt={showPassword ? "Hide password" : "Show password"}
+                className="show-password-icon"
+              />
             </button>
           </div>
 
