@@ -31,7 +31,7 @@ function App() {
 
           <Route path="/" element={<Login/>}></Route>
           <Route path="/login" element={<Login/>}></Route>
-          <Route path="/create" element={isAuthenticated() == true? <CreateAccount/> : <Login/>}></Route>
+          <Route path="/create" element={<CreateAccount />} />
           <Route path="/notes" element={<Notes/>}></Route>
           <Route path="*" element={<h1>Not Found</h1>}></Route>
 

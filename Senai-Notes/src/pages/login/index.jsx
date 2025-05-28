@@ -17,7 +17,7 @@ function Login() {
 
     try {
       const response = await fetch(
-        'https://apisenainotas-01-fddghxaxcna9augw.canadacentral-01.azurewebsites.net/Login',
+        'https://apisenainotas-01-fddghxaxcna9augw.canadacentral-01.azurewebsites.net/login',
         {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -35,16 +35,16 @@ function Login() {
         localStorage.setItem('meuToken', token);
         localStorage.setItem('meuId', userId);
 
-        // Redireciona para /notes futuramente
-        // window.location.href = '/notes';
+        
+       window.location.href = '/notes';
       } else if (response.status === 401) {
         alert('Suas credenciais estão incorretas. Tente novamente.');
       } else {
-        alert('Erro inesperado ocorreu. Caso continue, contate um administrador.');
+          alert('Erro inesperado ocorreu. Caso continue, contate um administrador.');
       }
-    } catch (error) {
+    } catch (err) {
       alert('Erro na conexão com os servidores.');
-      console.error(error);
+      console.err(err);
     }
   };
 
@@ -78,7 +78,9 @@ function Login() {
               onChange={(e) => setPassword(e.target.value)}
             />
             <button type="button" className="toggle-password" onClick={togglePasswordVisibility}>
-              <img className='olhos' src={Show} alt="olhinho" />
+
+              <img className='olhos' src={Show} alt="olhinhos" />
+
             </button>
           </div>
 
