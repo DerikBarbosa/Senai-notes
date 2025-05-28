@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Login from "./pages/Login/index.jsx";
 import Notes from "./pages/Notes/index.jsx"
 import CreateAccount from "./pages/CreateAccount/index.jsx";
+import Notes from "./pages/Notes/index.jsx";
 
 
 function App() {

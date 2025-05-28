@@ -40,7 +40,7 @@ function Login() {
       } else if (response.status === 401) {
         alert('Suas credenciais estão incorretas. Tente novamente.');
       } else {
-        alert('Erro inesperado ocorreu. Caso continue, contate um administrador.');
+          alert('Erro inesperado ocorreu. Caso continue, contate um administrador.');
       }
     } catch (error) {
       alert('Erro na conexão com os servidores.');
@@ -78,7 +78,11 @@ function Login() {
               onChange={(e) => setPassword(e.target.value)}
             />
             <button type="button" className="toggle-password" onClick={togglePasswordVisibility}>
+<<<<<<< HEAD
               <img className='olhos' src={Show} alt="olhinhos" />
+=======
+              <img src={Show} alt="olhinos" />
+>>>>>>> e914d1f8cad0e4a9e4420eeed15158e62845ff34
             </button>
           </div>
 
